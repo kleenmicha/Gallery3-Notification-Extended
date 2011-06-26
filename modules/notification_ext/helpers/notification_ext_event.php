@@ -130,7 +130,7 @@ class notification_ext_event_Core {
       return;
     }
 
-    $view = new View("user_profile_notification.html");
+    $view = new View("user_profile_notification_ext.html");
     $view->subscriptions = array();
     foreach(ORM::factory("subscription")
             ->where("user_id", "=", $data->user->id)
