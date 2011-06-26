@@ -1,0 +1,7 @@
+name = "Notification Extented"
+description = "Send notifications to users when changes are made to watched albums. Adds the Support for Text Mails"
+version = 1
+author_name = "kleenmicha"
+author_url = "http://speedyservice.de"
+info_url = "http://speedyservice.de"
+discuss_url = "http://speedyservice.de"
