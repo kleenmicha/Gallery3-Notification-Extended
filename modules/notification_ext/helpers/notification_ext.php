@@ -174,12 +174,14 @@ class notification_ext {
     	foreach (db::build()
 		 ->select(db::expr("DISTINCT `email`"))
 		 ->from("pending_notifications")
-		 ->execute() as $row) {
+		 ->execute() as $row)
+		 {
 			 $email = $row->email;
 			 $result = ORM::factory("pending_notification")
 			 ->where("email", "=", $email)
 			 ->find_all();
 			 if ($result->count() == 1) {
+				$pending = $result->current();
 				if ($pending->emailtype==1) {
 				Sendmail::factory()
 				 ->to($email)
